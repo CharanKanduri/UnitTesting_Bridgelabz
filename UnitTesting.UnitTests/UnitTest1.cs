@@ -13,8 +13,10 @@ namespace UnitTesting.UnitTests
         {
             greatestNumber = new GreatestNumber();
         }
+
+        
         [TestMethod]
-        public void LargestNumber_FirstNumber_IsGreater()
+        public void Int_LargestNumber_FirstNumber_IsGreater()
         {   //AAA rule
 
             //Arrange
@@ -26,7 +28,7 @@ namespace UnitTesting.UnitTests
             Assert.AreEqual(expectedValue, actualValue);
         }
         [TestMethod]
-        public void LargestNumber_SecondNumber_IsGreater()
+        public void Int_LargestNumber_SecondNumber_IsGreater()
         {   //AAA rule
 
             //Arrange
@@ -38,7 +40,7 @@ namespace UnitTesting.UnitTests
             Assert.AreEqual(expectedValue, actualValue);
         }
         [TestMethod]
-        public void LargestNumber_ThirdNumber_IsGreater()
+        public void Int_LargestNumber_ThirdNumber_IsGreater()
         {   //AAA rule
 
             //Arrange
@@ -49,5 +51,47 @@ namespace UnitTesting.UnitTests
             //Assert
             Assert.AreEqual(expectedValue, actualValue);
         }
+
+        //Testing for Float values
+
+        [TestMethod]
+        public void Float_LargestNumber_FirstNumber_IsGreater_()
+        {   //AAA rule
+
+            //Arrange
+            float first = 100.1F, second = 30.4F, third = 10.6F, actualValue, expectedValue;
+            expectedValue = first;
+            //Act
+            actualValue = greatestNumber.LargestNumberFloat(first, second, third);
+            //Assert
+            Assert.AreEqual(expectedValue, actualValue);
+        }
+
+        [TestMethod]
+        public void Float_LargestNumber_SecondNumber_IsGreater_()
+        {   //AAA rule
+
+            //Arrange
+            float first = 89.1F, second = 100.1F, third = 10.6F, actualValue, expectedValue;
+            expectedValue = second;
+            //Act
+            actualValue = greatestNumber.LargestNumberFloat(first, second, third);
+            //Assert
+            Assert.AreEqual(expectedValue, actualValue);
+        }
+        [TestMethod]
+        public void Float_LargestNumber_ThirdNumber_IsGreater_()
+        {   //AAA rule
+
+            //Arrange
+            float first = 89.1F, second = 70.1F, third = 100.6F, actualValue, expectedValue;
+            expectedValue = third;
+            //Act
+            actualValue = greatestNumber.LargestNumberFloat(first, second, third);
+            //Assert
+            Assert.AreEqual(expectedValue, actualValue);
+        }
+
+
     }
 }

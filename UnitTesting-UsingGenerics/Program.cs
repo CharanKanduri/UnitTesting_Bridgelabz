@@ -7,7 +7,7 @@ namespace UnitTesting_UsingGenerics
         static void Main(string[] args)
         {
             GreatestNumber obj = new GreatestNumber();
-            //Check greatest number among three number
+            //Check greatest number among three INT number
             Console.WriteLine("Welcome to generics program!");
             int number1, number2, number3;
             Console.WriteLine("Enter number 1");
@@ -18,6 +18,15 @@ namespace UnitTesting_UsingGenerics
             number3 = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Greatest number is {0} ", obj.LargestNumber(number1, number2, number3));
 
+            //Check greatest number among three FLOAT number
+            float numberf1, numberf2, numberf3;
+            Console.WriteLine("Enter number 1");
+            numberf1 = (float)Convert.ToDecimal(Console.ReadLine());
+            Console.WriteLine("Enter number 2");
+            numberf2 = (float)Convert.ToDecimal(Console.ReadLine());
+            Console.WriteLine("Enter number 3");
+            numberf3 = (float)Convert.ToDecimal(Console.ReadLine());
+            Console.WriteLine("Greatest number is {0} ", obj.LargestNumberFloat(numberf1, numberf2, numberf3));
         }
     }
 }
