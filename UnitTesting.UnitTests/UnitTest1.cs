@@ -164,5 +164,42 @@ namespace UnitTesting.UnitTests
             expectedValue = third;
             Assert.AreEqual(expectedValue, actualValue);
         }
+
+
+        //USECASE 4
+        [TestMethod]
+        public void UseCase4_1()
+        {
+            GenericClassExtended<int> obj3;
+            int expectedValue;
+            int[] arrayList = { 1, 44, 6, 34, 97, 103, 2, 777 };
+            obj3 = new GenericClassExtended<int>(arrayList);
+            expectedValue = 777;
+            int actualValue = obj3.MaximumValueFunction(arrayList);
+            Assert.AreEqual(expectedValue, actualValue);
+        }
+        [TestMethod]
+        public void UseCase4_2()
+        {
+            GenericClassExtended<float> obj3;
+            float expectedValue;
+            float[] arrayList = { 1, 44.3F, 6, 34, 97, 103, 2, 777.8F };
+            obj3 = new GenericClassExtended<float>(arrayList);
+            expectedValue = 777.8F;
+            float actualValue = obj3.MaximumValueFunction(arrayList);
+            Assert.AreEqual(expectedValue, actualValue);
+        }
+
+        [TestMethod]
+        public void UseCase4_3()
+        {
+            GenericClassExtended<string> obj3;
+            string expectedValue;
+            string[] arrayList = { "Apple", "Mango", "Grapes" };
+            obj3 = new GenericClassExtended<string>(arrayList);
+            expectedValue = "Mango";
+            string actualValue = obj3.MaximumValueFunction(arrayList);
+            Assert.AreEqual(expectedValue, actualValue);
+        }
     }
 }
