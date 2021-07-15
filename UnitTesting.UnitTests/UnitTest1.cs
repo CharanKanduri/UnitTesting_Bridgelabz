@@ -92,6 +92,31 @@ namespace UnitTesting.UnitTests
             Assert.AreEqual(expectedValue, actualValue);
         }
 
+        //Testing for String values
+        [TestMethod]
+        public void String_LargestNumber_FirstString_IsGreater()
+        {
+            string first = "Zoo", second = "Beach", third = "Park", expectedValue, actualValue;
+            expectedValue = first;
+            actualValue = greatestNumber.LargestNumberString(first, second, third);
+            Assert.AreEqual(expectedValue, actualValue);
+        }
 
+        [TestMethod]
+        public void String_LargestNumber_SecondString_IsGreater()
+        {
+            string first = "Amusement", second = "Park", third = "Cinema", expectedValue, actualValue;
+            expectedValue = second;
+            actualValue = greatestNumber.LargestNumberString(first, second, third);
+            Assert.AreEqual(expectedValue, actualValue);
+        }
+        [TestMethod]
+        public void String_LargestNumber_ThirdString_IsGreater()
+        {
+            string first = "Hiking", second = "Beach", third = "Park", expectedValue, actualValue;
+            expectedValue = third;
+            actualValue = greatestNumber.LargestNumberString(first, second, third);
+            Assert.AreEqual(expectedValue, actualValue);
+        }
     }
 }

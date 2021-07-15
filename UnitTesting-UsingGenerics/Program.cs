@@ -27,6 +27,16 @@ namespace UnitTesting_UsingGenerics
             Console.WriteLine("Enter number 3");
             numberf3 = (float)Convert.ToDecimal(Console.ReadLine());
             Console.WriteLine("Greatest number is {0} ", obj.LargestNumberFloat(numberf1, numberf2, numberf3));
+
+            //Check greatest number among three STRINGS
+            string string1, string2, string3;
+            Console.WriteLine("Enter string 1");
+            string1 = Console.ReadLine();
+            Console.WriteLine("Enter string 2");
+            string2 = Console.ReadLine();
+            Console.WriteLine("Enter string 3");
+            string3 = Console.ReadLine();
+            Console.WriteLine("Greatest string is {0} \n", obj.LargestNumberString(string1, string2, string3));
         }
     }
 }
