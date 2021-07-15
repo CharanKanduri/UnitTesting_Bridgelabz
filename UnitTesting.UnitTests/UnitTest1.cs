@@ -201,5 +201,18 @@ namespace UnitTesting.UnitTests
             string actualValue = obj3.MaximumValueFunction(arrayList);
             Assert.AreEqual(expectedValue, actualValue);
         }
+
+        //USECASE 5
+        [TestMethod]
+        public void UseCase5()
+        {
+            GenericClassExtended<string> obj3;
+            string expectedValue;
+            string[] arrayList = { "Apple", "Mango", "Grapes" };
+            obj3 = new GenericClassExtended<string>(arrayList);
+            expectedValue = "Mango";
+            string actualValue = obj3.MaxMethod();
+            Assert.AreEqual(expectedValue, actualValue);
+        }
     }
 }

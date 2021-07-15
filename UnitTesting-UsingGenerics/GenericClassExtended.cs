@@ -28,5 +28,15 @@ namespace UnitTesting_UsingGenerics
             var sortarrayval = Sort(arrayList);
             return sortarrayval[^1];
         }
+        public T MaxMethod()
+        {
+            T maxValue = this.MaximumValueFunction(arrayList);
+            return maxValue;
+        }
+        public void PrintGreatestValue()
+        {
+            var max = MaxMethod();
+            Console.WriteLine("Maximum value is: {0}", max);
+        }
     }
 }
