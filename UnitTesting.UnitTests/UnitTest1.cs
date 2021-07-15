@@ -7,11 +7,13 @@ namespace UnitTesting.UnitTests
     public class UnitTest1
     {
         GreatestNumber greatestNumber;
+        GenericClassForGreaterValue genericGreaterValue;
 
         [TestInitialize]
         public void SetUP()
         {
             greatestNumber = new GreatestNumber();
+            genericGreaterValue = new GenericClassForGreaterValue();
         }
 
         
@@ -116,6 +118,35 @@ namespace UnitTesting.UnitTests
             string first = "Hiking", second = "Beach", third = "Park", expectedValue, actualValue;
             expectedValue = third;
             actualValue = greatestNumber.LargestNumberString(first, second, third);
+            Assert.AreEqual(expectedValue, actualValue);
+        }
+
+
+        //Testing for Generic-CLass
+
+       
+        [TestMethod]
+        public void Generics_Int_LargestNumber_FirstNumber_IsGreater()
+        {
+            int first = 100, second = 38, third = 10, actualValue, expectedValue;
+            expectedValue = first;
+            actualValue = genericGreaterValue.GenericMethodForGreatest<int>(first, second, third);
+            Assert.AreEqual(expectedValue, actualValue);
+        }
+        [TestMethod]
+        public void UseCase3_4_2()
+        {
+            float first = 10.1F, second = 300.4F, third = 10.6F, expectedValue, actualValue;
+            expectedValue = second;
+            actualValue = genericGreaterValue.GenericMethodForGreatest<float>(first, second, third);
+            Assert.AreEqual(expectedValue, actualValue);
+        }
+        [TestMethod]
+        public void UseCase3_4_3()
+        {
+            string first = "Amusement", second = "Park", third = "Cinema", expectedValue, actualValue;
+            expectedValue = second;
+            actualValue = genericGreaterValue.GenericMethodForGreatest<string>(first, second, third);
             Assert.AreEqual(expectedValue, actualValue);
         }
     }
